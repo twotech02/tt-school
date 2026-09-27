@@ -1,0 +1,6 @@
+{
+  "name": "Everfield International School",
+  "description": "Everfield International School - Learn. Explore. Create. Lead. A modern, future-focused K-12 international school preparing students for academic excellence, innovation, and university success.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

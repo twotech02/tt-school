@@ -1,0 +1,148 @@
+/* Mantine styles */
+@import '@mantine/core/styles.css';
+@import '@mantine/carousel/styles.css';
+
+:root {
+  --color-primary: #1F1F1F;
+  --color-text: #1F1F1F;
+  --color-text-secondary: #555555;
+  --color-text-muted: #777777;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F7F7F5;
+  --color-warm-neutral: #ECEAE5;
+  --color-border: #E8E8E4;
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+  --color-accent-green: #1B4332;
+  --max-content-width: 1360px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--color-primary);
+  letter-spacing: -0.025em;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hairline dividers */
+.hairline-b {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Subtle image zoom on hover */
+.img-zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.03);
+}
+
+/* Image fallback overlay if network or image loads slowly */
+.img-fallback {
+  background-color: #EFEFEA;
+}
+
+/* Tabular figures for data, stats, numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Editorial eyebrow styling */
+.editorial-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.editorial-eyebrow::before {
+  content: '/';
+  color: #999;
+  font-weight: 400;
+}
+
+/* Transparent Header styles */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.site-header.transparent {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  color: var(--color-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F7F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D4D0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A2;
+}
